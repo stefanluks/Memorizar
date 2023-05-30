@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    height: 0;
+}
+
+.jogo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.titulo{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px gray;
+    background-color: black;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+}
+
+.corpo-menu{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu{
+    width: 90%;
+    height: 50px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    border: 2px solid black;
+    background-color: rgb(54, 51, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .7s;
+}
+
+.btn-top{
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    transform: translate(-50%, -50%);
+}
+
+.titulo span{
+    height: 100%;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu span, .btn-menu i{
+    width: max-content;
+    height: 100%;
+    margin: 0px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu:hover{
+    box-shadow: 0 0 10px black;
+}
+
+.btn-menu.hidden, .btn-top.hidden{
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    border: none;
+}
+
+.base-caixas{
+    width: 80%;
+    height: 500px;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.caixa{
+    width: calc(100% / 3 - 2px);
+    height: calc(100% / 3 - 2px);
+    border-radius: 10px;
+    opacity: .8;
+    background-color: lightgray;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.caixa.ativar{
+    opacity: 1;
+    background-color: rgb(64, 64, 238);
+}
+
+.bg-red{
+    background-color: red !important;
+}
+
+.caixa.click{
+    animation: clique normal .2s;
+}
+
+@keyframes clique {
+    0%{ background-color: gray;}
+    100%{ background-color: yellow;}
+}
